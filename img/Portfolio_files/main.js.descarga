@@ -1,5 +1,4 @@
 let list = document.querySelectorAll('.li_link');
-let headerToggle = document.getElementById('header-toggle')
 
 list.forEach(item => {
     item.addEventListener('click', () => {
@@ -14,17 +13,7 @@ list.forEach(item => {
 let sideToggle = document.getElementById('header-toggle');
 let sideBar = document.querySelector('.side-bar')
 sideToggle.addEventListener('click', ()=>{
-  if(!sideBar.classList.contains('side-bar-active') ){
-    headerToggle.classList.replace('bx', 'fa-solid');
-    headerToggle.classList.replace('bx-menu', 'fa-xmark');
-    sideBar.classList.toggle('side-bar-active');
-    sideBar.style.display = 'block';
-  }else{
-    sideBar.classList.toggle('side-bar-active');
-    headerToggle.classList.replace('fa-solid', 'bx');
-    headerToggle.classList.replace('fa-xmark', 'bx-menu');
-    sideBar.style.display = 'none';
-  }
+  sideBar.classList.toggle('side-bar-active');
 })
 
 
