@@ -617,11 +617,15 @@ footer::after {
 }
 .footer-copy{
   width: 100vw;
-  height: 5vh;
+  height: 8vh;
   color: #9db5ff;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-left: 40px;
+}
+.footercopy h6{
+  text-align: center;
 }
 /* media */
 @media (max-width: 320px) {
