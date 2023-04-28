@@ -11,6 +11,11 @@ body {
   color: #ccc;
   overflow-x: hidden;
 }
+body.active {
+  background-color: #ccc;
+  color: #171617;
+}
+
 .header-sect {
   position: fixed;
   top: 0;
@@ -42,7 +47,44 @@ body {
   color: #fff;
   cursor: pointer;
 }
+.dark-mode-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #222;
+  box-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px -4px rgba(0, 0, 0, 0.1);
+}
+.dark-mode-toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #444, #222);
+  height: 100%;
+  width: 50%;
+  transform: scale(0.87);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
 
+.dark-mode-toggle.d-active {
+  background-color: #efefef;
+}
+.dark-mode-toggle.d-active .indicator {
+  left: 50%;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 1),
+    inset 0 -4px -4px rgba(255, 255, 255, 1);
+}
 /*  side nav */
 .side-bar {
   transition: all 0.4s ease-in;
@@ -537,6 +579,7 @@ footer {
   background: linear-gradient(#422640, rgba(145, 169, 240, 0.6));
   width: 100vw;
   height: 75vh;
+  overflow: hidden;
   position: relative;
 }
 footer::before {
@@ -615,7 +658,7 @@ footer::after {
   padding: 1rem;
   border-radius: 20px;
 }
-.footer-copy{
+.footer-copy {
   width: 100vw;
   height: 8vh;
   color: #9db5ff;
@@ -624,7 +667,7 @@ footer::after {
   align-items: center;
   margin-left: 40px;
 }
-.footercopy h6{
+.footercopy h6 {
   text-align: center;
 }
 /* media */
@@ -717,6 +760,11 @@ footer::after {
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
+  .dark-mode-toggle {
+    width: 40px;
+    height: 20px;
+    right: 5px;
+  }
   .side-bar {
     opacity: 0;
     display: none;

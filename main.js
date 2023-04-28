@@ -46,3 +46,11 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+
+const darkToggle = document.querySelector('.dark-mode-toggle');
+const body = document.querySelector('body')
+darkToggle.addEventListener('click',()=>{
+  darkToggle.classList.toggle('d-active');
+  body.classList.toggle('active')
+})
