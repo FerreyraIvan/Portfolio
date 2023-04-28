@@ -672,6 +672,11 @@ footer::after {
 }
 /* media */
 @media (max-width: 320px) {
+  .dark-mode-toggle {
+    width: 40px;
+    height: 20px;
+    right: 5px;
+  }
   .side-bar {
     opacity: 0;
   }
@@ -852,5 +857,11 @@ footer::after {
   }
   .input-container .input {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .link {
+    margin-right: 10px;
   }
 }
