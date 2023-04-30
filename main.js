@@ -10,6 +10,7 @@ list.forEach(item => {
       item.classList.add('active');
     });
   });
+/* SIDE BAR - TOGGLE */ 
 
 let sideToggle = document.getElementById('header-toggle');
 let sideBar = document.querySelector('.side-bar')
@@ -47,10 +48,35 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-
+/* DARK / LIGHT - TOGGLE */
 const darkToggle = document.querySelector('.dark-mode-toggle');
-const body = document.querySelector('body')
+const body = document.querySelector('body');
+let getMode = localStorage.getItem('mode');
+
+if(getMode === 'light'){
+  body.classList.add('active')
+}
+
+
+
+
 darkToggle.addEventListener('click',()=>{
+
   darkToggle.classList.toggle('d-active');
+
   body.classList.toggle('active')
+
+  if(body.classList.contains('active')){
+    return localStorage.setItem("mode", "light")
+  } 
+    localStorage.setItem("mode", "dark")
+})
+
+const headerIndicator = document.getElementById('header-indicator')
+
+window.addEventListener('load', ()=>{
+  setTimeout(() => {
+    headerIndicator.style.opacity = '0'
+  }, 2000);
+  
 })
