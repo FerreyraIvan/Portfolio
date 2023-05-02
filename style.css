@@ -298,6 +298,7 @@ body.active .name_container a:hover {
 .proyects-container {
   margin: 0 auto;
   width: 80vw;
+  overflow: hidden;
 }
 .proyect-cont {
   display: flex;
