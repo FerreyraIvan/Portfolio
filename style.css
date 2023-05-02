@@ -39,6 +39,12 @@ body.active .name_container a:hover {
   color: #121212;
   transition: padding 0.6s ease;
 }
+body.active .li_container li:hover a,
+body.active .li_container li:hover .icon,
+body.active .name_container a:hover {
+  font-weight: 800;
+  transition: all 0.6s ease;
+}
 
 .header-sect {
   position: fixed;
@@ -138,6 +144,7 @@ body.active .name_container a:hover {
     inset 0 4px 4px rgba(255, 255, 255, 1),
     inset 0 -4px -4px rgba(255, 255, 255, 1);
 }
+
 /*  side nav */
 .side-bar {
   transition: all 0.4s ease-in;
