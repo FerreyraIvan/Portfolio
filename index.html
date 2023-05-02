@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <script src="https://kit.fontawesome.com/a388be2306.js" crossorigin="anonymous" defer="defer"></script>
@@ -14,20 +15,22 @@
 <body>
     <header class="header-sect">
         <div class="header__container">
-            <div class="header__Img">
+            <div class="header__Img " data-aos="zoom-out-down">
                 <img src="./img/footer1-img.png" class="header__img" />
             </div>
             <div class="header__toggle">
-                <i class="bx bx-menu" id="header-toggle"></i>
-                <SPAN id="header-indicator">Open side bar</SPAN>
+                <i class="bx bx-menu" id="header-toggle" data-aos="zoom-out-down"></i>
+                <SPAN id="header-indicator" data-aos="zoom-out-down">Open side bar
+                    <div class="shape" data-aos="zoom-out-down"></div>
+                </SPAN>
             </div>
         </div>
 
-        <div class="dark-mode-toggle">
+        <div class="dark-mode-toggle ">
             <i class="indicator "></i>
         </div>
     </header>
-    <section class="side-bar side-bar-active">
+    <section class="side-bar ">
         <nav class="nav">
             <div class="name_container">
                 <a href="#" class="nav__link nav__logo">
@@ -65,12 +68,14 @@
     </section>
     <main>
         <section class="intro">
-            <div class="intro_img_cont">
-                <img src="./img/footer1-img.png" alt="">
+
+            <div class="intro_img_cont ">
+                <img src="./img/footer1-img.png" data-aos="zoom-in" alt="">
             </div>
             <div class="intro_text_cont">
-                <h1 class="intro_text_h1">Who i am?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores quod repudiandae.
+                <h1 class="intro_text_h1" data-aos="zoom-in-up">Who i am?</h1>
+                <p data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores quod
+                    repudiandae.
                     Reprehenderit quia quidem deserunt assumenda. Earum corporis nihil laborum, molestias recusandae,
                     dolores, quos voluptatum aliquid aspernatur et quidem?</p>
             </div>
@@ -97,7 +102,7 @@
                 <span>Portfolio</span>
                 <h1>Each project is a unique piece of development 🧩</h1>
                 <div class="proyects">
-                    <div class="proyect">
+                    <div class="proyect" data-aos="fade-right">
                         <div class="proyect-img-cont">
                             <a href="">
                                 <img src="./img/dioniso-cafe.000webhostapp.com_ (1).png" alt=""></a>
@@ -119,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="proyect proyect-reversed">
+                    <div class="proyect proyect-reversed" data-aos="fade-left">
                         <div class="proyect-img-cont">
                             <a href="">
                                 <img src="./img/burgerparadiseWEB.png" alt=""></a>
@@ -140,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="proyect ">
+                    <div class="proyect " data-aos="fade-right">
                         <div class="proyect-img-cont">
                             <a href=""><img src="./img/dioniso-cafe.000webhostapp.com_ (1).png" alt=""></a>
                         </div>
@@ -160,7 +165,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="proyect proyect-reversed">
+                    <div class="proyect proyect-reversed" data-aos="fade-left">
                         <div class="proyect-img-cont">
                             <a href=""><img src="./img/dioniso-cafe.000webhostapp.com_ (1).png" alt=""></a>
                         </div>
@@ -250,11 +255,11 @@
         </section>
     </main>
     <footer class="footer">
-        <h2 class="footer-h2">
+        <h2 class="footer-h2" data-aos="zoom-in" data-aos-duration="3000">
             Thanks for watching
         </h2>
         <div class="footer-social-cont">
-            <div class="footer-social">
+            <div class="footer-social" data-aos="flip-right" data-aos-duration="1000">
                 <a href="https://instagram.com" target="_blank">
                     <div class="footer-social-info">
                         <H5>Instagram</H5>
@@ -263,7 +268,7 @@
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-            <div class="footer-social">
+            <div class="footer-social" data-aos="flip-right" data-aos-duration="1000">
                 <a href="https://instagram.com" target="_blank">
                     <div class="footer-social-info">
                         <H5>Instagram</H5>
@@ -272,7 +277,7 @@
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-            <div class="footer-social">
+            <div class="footer-social" data-aos="flip-right" data-aos-duration="1000">
                 <a href="https://instagram.com" target="_blank">
                     <div class="footer-social-info">
                         <H5>Instagram</H5>
@@ -281,7 +286,7 @@
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-            <div class="footer-social">
+            <div class="footer-social" data-aos="flip-right" data-aos-duration="1000">
                 <a href="https://instagram.com" target="_blank">
                     <div class="footer-social-info">
                         <H5>Instagram</H5>
@@ -296,6 +301,10 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -72,22 +72,34 @@ body.active .name_container a:hover {
   cursor: pointer;
 }
 #header-indicator {
-  color: #fefefe;
-  background-color: #422640;
-  box-shadow: 0 0 20px 3px;
+  color: #181718;
+  box-shadow: 0px 0px 6px 1px;
   height: auto;
   width: auto;
   font-size: 0.7rem;
   padding: 10px;
   font-family: "Poppins";
   transition: all 0.5s ease-in;
-  border-radius: 20px;
   position: relative;
-  top: 30px;
-  right: 10px;
-  border-top-left-radius: 0px;
+  z-index: 100;
+  top: 40px;
+  background-color: #fefefe;
+  right: 25px;
+  border-top: 1px solid #fefefe;
 }
-
+#header-indicator .shape {
+  position: absolute;
+  width: 12px;
+  background-color: #fefefe;
+  height: 12px;
+  border: 2px solid #fefefe;
+  top: -6px;
+  right: 80%;
+  z-index: 10;
+  transform: rotate(45deg);
+  border-right: none;
+  border-bottom: none;
+}
 .dark-mode-toggle {
   position: absolute;
   top: 50%;
@@ -657,6 +669,7 @@ footer::after {
   margin-top: 300px;
   background-color: #0b0b0b;
   padding: 100px;
+  flex-wrap: wrap;
 }
 .footer-social {
   border-bottom: 1px solid #422640;
@@ -804,6 +817,15 @@ footer::after {
   .input-container .input {
     width: 100%;
   }
+  footer {
+    height: auto;
+  }
+  .footer-social-cont {
+    align-items: center;
+  }
+  .footer-social {
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 320px) and (max-width: 768px) {
   .dark-mode-toggle {
@@ -899,10 +921,28 @@ footer::after {
   .input-container .input {
     width: 100%;
   }
+  footer {
+    height: auto;
+  }
+  .footer-social-cont {
+    align-items: center;
+  }
+  .footer-social {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
   .link {
     margin-right: 10px;
+  }
+  footer {
+    height: auto;
+  }
+  .footer-social-cont {
+    align-items: center;
+  }
+  .footer-social {
+    margin-bottom: 20px;
   }
 }

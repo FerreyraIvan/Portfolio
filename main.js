@@ -78,5 +78,8 @@ window.addEventListener('load', ()=>{
   setTimeout(() => {
     headerIndicator.style.opacity = '0'
   }, 2000);
+  if(getMode === 'light'){
+    headerIndicator.style.color = '#171817'
+  }
   
 })
